@@ -14,11 +14,7 @@ export class MovieComponent implements OnInit {
   @Input('movie')
   movie!: Movie;
 
-
   constructor() { }
-
-
-
 
   ngOnInit(): void {
   }

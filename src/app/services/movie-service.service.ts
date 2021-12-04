@@ -17,5 +17,4 @@ export class MovieServiceService {
     getAllMovie(): Observable<any>{
       return this.http.get<any>(this.baseUrl+'/movies');
     }
-
 }

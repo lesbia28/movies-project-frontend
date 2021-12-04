@@ -14,7 +14,7 @@ export class MovieListComponent implements OnInit {
   constructor(
     private movieService: MovieServiceService
   ) { 
-this.movieList=[new Movie("61a2e59a2dc2723fd2e58bd8","La naranja mecanica",1990,"google.es","Steven Spielberg","Robin Willians, Brad Pitt, ")]
+  this.movieList=[new Movie("61a2e59a2dc2723fd2e58bd8","La naranja mecanica",1990,"google.es","Steven Spielberg","Robin Willians, Brad Pitt")]
 
   }
 
@@ -26,9 +26,16 @@ this.movieList=[new Movie("61a2e59a2dc2723fd2e58bd8","La naranja mecanica",1990,
   getMovies(): any{
     this.movieService.getAllMovie().subscribe(dataResult =>{
       this.movieList=dataResult;
-      console.log(dataResult)
+      console.log(dataResult);
+      console.log(this.movieList);
       return this.movieList;
     })
+  }
+
+  gridColumns = 3;
+
+  toggleGridColumns() {
+    this.gridColumns = this.gridColumns === 3 ? 4 : 3;
   }
 
 }
