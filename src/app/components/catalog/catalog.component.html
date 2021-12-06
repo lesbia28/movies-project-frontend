@@ -1,1 +1,24 @@
-<p>catalog works!</p>
+<mat-toolbar color="primary">
+    <span>Catalog</span>
+  </mat-toolbar>
+
+<div class=form>
+    <form>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Movie</mat-label>
+                <input matInput  type="text" #txtSearch (keyup)="search( txtSearch.value )">
+                <!-- <input matInput  type="text" #txtSearch (keyup)="search( txtSearch.value )" [(ngModel)] = "searchName"> -->
+
+            </mat-form-field>
+          </p>
+    
+          <div class="example-button-row">
+            <button type="submit" mat-raised-button color="accent">Search</button>
+          </div>  
+    
+      </form>
+</div>
+
+
+
